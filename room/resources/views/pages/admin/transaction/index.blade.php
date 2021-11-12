@@ -29,7 +29,7 @@
                                 <thead>
                                     <tr>
                                         <th id="id">ID</th>
-                                        <th id="schedule">Schedule</th>
+                                        <th id="schedule">Schedules</th>
                                         <th id="NIK">NIK</th>
                                         <th id="room_name">Room</th>
                                         <th id="check_in">Check In</th>
