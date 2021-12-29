@@ -30,11 +30,11 @@
               href="{{ route('dashboard-transactions.index') }}"
               class="list-group-item list-group-item-action {{ (request()->is('dashboard-transactions*')) ? 'active' : '' }}"
               >Check Room</a
-            >
+            > --}}
             <a
               href="{{ route('dashboard.index') }}"
               class="list-group-item list-group-item-action {{ (request()->is('dashboard*')) ? 'active' : '' }}"
-              >Dashboard</a> --}}
+              >Dashboard</a>
 
               <a
               href="{{ route('dashboard-loans.index') }}"
@@ -70,10 +70,6 @@
               class="list-group-item list-group-item-action {{ (request()->is('admin/user*')) ? 'active' : '' }}"
               >Users</a
             > --}}
-
-
-            
-
 
             {{-- <a
               href="{{ route('logout') }}"
