@@ -48,8 +48,8 @@
                                         <label>Schedule</label>
                                         <select name="schedule" class="form-control">
                                             @foreach ($schedule as $schedule)
-                                            <option value="{{ $schedule->id }}">{{ $schedule->class_name }}</option>
-                                        @endforeach
+                                                <option value="{{ $schedule->id }}">{{ $schedule->classes->class_name }}</option>
+                                            @endforeach
                                          </select>
                                     </div>
 

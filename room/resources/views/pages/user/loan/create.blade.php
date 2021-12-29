@@ -43,10 +43,10 @@
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="form-group">
+                                        {{-- <div class="form-group">
                                             <label>NIK</label>
                                             <input type="text" name="NIK" class="form-control" required>
-                                        </div>
+                                        </div> --}}
                                         <div class="form-group">
                                             <label>Room</label>
                                             <select name="room_name" class="form-control">
@@ -76,12 +76,12 @@
                                             </div>
                                           </div>
 
-                                        <div class="form-group">
+                                        {{-- <div class="form-group">
                                             <label>Status</label>
                                             <select name="status" class="form-control">
                                                 <option>Mengajukan</option>
                                             </select>
-                                        </div>
+                                        </div> --}}
                                 </div>
                                 <div class="row">
                                     <div class="col text-right">

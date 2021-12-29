@@ -45,6 +45,14 @@
                                                     <input type="text" name="name" value="{{ $items->name }}" class="form-control" required>
                                                 </div>
                                                 <div class="form-group">
+                                                    <label>Class</label>
+                                                    <select name="class_name" class="form-control">
+                                                        @foreach ($classes as $class)
+                                                            <option value="{{ $class->id }}">{{ $class->class_name }}</option>
+                                                        @endforeach
+                                                     </select>
+                                                </div>
+                                                <div class="form-group">
                                                     <div class="form-group">
                                                         <label>Username</label>
                                                         <input type="text" name="username" value="{{ $items->username }}" class="form-control" required>

@@ -20,11 +20,19 @@ class User extends Authenticatable
     protected $fillable = [
         'NIK', 
         'name', 
+        'class_name',
         'username', 
         'email', 
+        'password',
         'position', 
         'RFID',
     ];
+
+    public function classes()
+    {
+        return $this->belongsTo(Classes::class, 'class_name', 'id');
+        
+    }
 
     /**
      * The attributes that should be hidden for serialization.

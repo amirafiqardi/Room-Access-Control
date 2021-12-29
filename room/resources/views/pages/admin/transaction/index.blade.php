@@ -16,6 +16,13 @@
             <p class="dashboard-subtitle">
                 List of Check Room
             </p>
+            {{-- <script type="text/javascript">
+            $(document).ready(function(){
+                setInterval(function(){
+                    $("#ceksensor").load('ceksensor.php');
+                }, 1000);
+            });
+            </script> --}}
         </div>
         <div class="dashboard-content">
             <div class="row">
@@ -29,7 +36,7 @@
                                 <thead>
                                     <tr>
                                         <th id="id">ID</th>
-                                        <th id="schedule">Schedules</th>
+                                        <th id="schedule">Schedule</th>
                                         <th id="NIK">NIK</th>
                                         <th id="room_name">Room</th>
                                         <th id="check_in">Check In</th>
@@ -60,7 +67,7 @@
             },
             columns: [
                 {data: 'id', name:'id'},
-                {data: 'schedule', name:'schedule'},
+                {data: 'schedule.classes.class_name', name:'schedule.classes.class_name'},
                 {data: 'user.NIK', name:'user.NIK'},
                 {data: 'room.room_name', name:'room.room_name'},
                 {data: 'checkin', name:'checkin'},

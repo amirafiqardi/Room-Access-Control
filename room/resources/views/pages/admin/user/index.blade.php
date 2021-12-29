@@ -31,9 +31,11 @@
                                         <th id="id">ID</th>
                                         <th id="NIK">NIK</th>
                                         <th id="name">Name</th>
+                                        <th id="class_name">Class</th>
                                         <th id="username">Username</th>
                                         <th id="email">Email</th>
                                         <th id="position">Position</th>
+                                        <th id="position">Roles</th>
                                         <th id="RFID">RFID</th>
                                         <th>Action</th>
                                 </thead>
@@ -62,9 +64,11 @@
                 {data: 'id', name:'id'},
                 {data: 'NIK', name:'NIK'},
                 {data: 'name', name:'name'},
+                {data: 'classes.class_name', name:'classes.class_name'},
                 {data: 'username', name:'username'},
                 {data: 'email', name:'email'},
                 {data: 'position', name:'position'},
+                {data: 'roles', name:'roles'},
                 {data: 'RFID', name:'RFID'},
                 {
                 data: 'action',

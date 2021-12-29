@@ -20,6 +20,7 @@ class Loan extends Model
         'finish',
         'status',
     ];
+    
 
     public function user()
     {
@@ -30,6 +31,12 @@ class Loan extends Model
     public function room()
     {
         return $this->belongsTo(Room::class, 'room_name', 'id');
+        
+    }
+
+    public function schedule()
+    {
+        return $this->belongsTo(Schedule::class, 'room_name', 'id');
         
     }
 

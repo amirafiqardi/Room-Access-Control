@@ -79,8 +79,6 @@
                                               </span>
                                             </div>
                                           </div>
-
-
                                 </div>
                                 <div class="row">
                                     <div class="col text-right">

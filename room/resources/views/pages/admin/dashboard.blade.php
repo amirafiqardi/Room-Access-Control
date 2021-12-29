@@ -1,4 +1,4 @@
-@extends('layouts.dashboard')
+@extends('layouts.admin')
 
 
 @section('title')
@@ -12,96 +12,33 @@
     >
     <div class="container-fluid">
         <div class="dashboard-heading">
-        <h2 class="dashboard-title">Dashboard</h2>
+        <h2 class="dashboard-title">Admin Dashboard</h2>
         <p class="dashboard-subtitle">
             Administrator panel
         </p>
         </div>
         <div class="dashboard-content">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-12">
             <div class="card mb-2">
                 <div class="card-body">
                 <div class="dashboard-card-title">
-                    GU 602
+                    Jumlah User
                 </div>
                 <div class="dashboard-card-subtitle">
-                    <div class="row">
-                        <div class="col">
-                            <div class="dashboard-card-title">
-                                terjadwal
-                            </div>
-                            {{ $new }}
-                        </div>
-                        <div class="col">
-                            <div class="dashboard-card-title">
-                                check in
-                            </div>
-                            {{ $checkin }}
-                        </div>
-                      </div>
+                    {{ $transaction }}
                 </div>
                 </div>
             </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="card mb-2">
-                    <div class="card-body">
-                    <div class="dashboard-card-title">
-                        GU 604
-                    </div>
-                    <div class="dashboard-card-subtitle">
-                        <div class="row">
-                            <div class="col">
-                                <div class="dashboard-card-title">
-                                    terjadwal
-                                </div>
-                                {{ $new2 }}
-                            </div>
-                            <div class="col">
-                                <div class="dashboard-card-title">
-                                    check in
-                                </div>
-                                {{ $checkin2 }}
-                            </div>
-                          </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-        
-            <div class="col-md-4">
-                <div class="card mb-2">
-                    <div class="card-body">
-                    <div class="dashboard-card-title">
-                        GU 606
-                    </div>
-                    <div class="dashboard-card-subtitle">
-                        <div class="row">
-                            <div class="col">
-                                <div class="dashboard-card-title">
-                                    terjadwal
-                                </div>
-                                {{ $new3 }}
-                            </div>
-                            <div class="col">
-                                <div class="dashboard-card-title">
-                                    check in
-                                </div>
-                                {{ $checkin3 }}
-                            </div>
-                          </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-
-                <div class="col-md-4">
+            <div class="dashboard-content">
+                <div class="row">
+                    <div class="col-md-4">
                     <div class="card mb-2">
                         <div class="card-body">
                         <div class="dashboard-card-title">
-                            GU 607
+                            GU 602
                         </div>
                         <div class="dashboard-card-subtitle">
                             <div class="row">
@@ -109,25 +46,25 @@
                                     <div class="dashboard-card-title">
                                         terjadwal
                                     </div>
-                                    {{ $new4 }}
+                                    {{ $new }}
                                 </div>
                                 <div class="col">
                                     <div class="dashboard-card-title">
                                         check in
                                     </div>
-                                    {{ $checkin4 }}
+                                    {{ $checkin }}
                                 </div>
                               </div>
                         </div>
                         </div>
                     </div>
                     </div>
-
+        
                     <div class="col-md-4">
                         <div class="card mb-2">
                             <div class="card-body">
                             <div class="dashboard-card-title">
-                                GU 608
+                                GU 604
                             </div>
                             <div class="dashboard-card-subtitle">
                                 <div class="row">
@@ -135,25 +72,51 @@
                                         <div class="dashboard-card-title">
                                             terjadwal
                                         </div>
-                                        {{ $new5 }}
+                                        {{ $new2 }}
                                     </div>
                                     <div class="col">
                                         <div class="dashboard-card-title">
                                             check in
                                         </div>
-                                        {{ $checkin5 }}
+                                        {{ $checkin2 }}
                                     </div>
                                   </div>
                             </div>
                             </div>
                         </div>
                         </div>
-
+                
+                    <div class="col-md-4">
+                        <div class="card mb-2">
+                            <div class="card-body">
+                            <div class="dashboard-card-title">
+                                GU 606
+                            </div>
+                            <div class="dashboard-card-subtitle">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="dashboard-card-title">
+                                            terjadwal
+                                        </div>
+                                        {{ $new3 }}
+                                    </div>
+                                    <div class="col">
+                                        <div class="dashboard-card-title">
+                                            check in
+                                        </div>
+                                        {{ $checkin3 }}
+                                    </div>
+                                  </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+        
                         <div class="col-md-4">
                             <div class="card mb-2">
                                 <div class="card-body">
                                 <div class="dashboard-card-title">
-                                    RTF 3.1
+                                    GU 607
                                 </div>
                                 <div class="dashboard-card-subtitle">
                                     <div class="row">
@@ -161,25 +124,25 @@
                                             <div class="dashboard-card-title">
                                                 terjadwal
                                             </div>
-                                            {{ $new6 }}
+                                            {{ $new4 }}
                                         </div>
                                         <div class="col">
                                             <div class="dashboard-card-title">
                                                 check in
                                             </div>
-                                            {{ $checkin6 }}
+                                            {{ $checkin4 }}
                                         </div>
                                       </div>
                                 </div>
                                 </div>
                             </div>
                             </div>
-
+        
                             <div class="col-md-4">
                                 <div class="card mb-2">
                                     <div class="card-body">
                                     <div class="dashboard-card-title">
-                                        RTF 3.3
+                                        GU 608
                                     </div>
                                     <div class="dashboard-card-subtitle">
                                         <div class="row">
@@ -187,25 +150,25 @@
                                                 <div class="dashboard-card-title">
                                                     terjadwal
                                                 </div>
-                                                {{ $new7 }}
+                                                {{ $new5 }}
                                             </div>
                                             <div class="col">
                                                 <div class="dashboard-card-title">
                                                     check in
                                                 </div>
-                                                {{ $checkin7 }}
+                                                {{ $checkin5 }}
                                             </div>
                                           </div>
                                     </div>
                                     </div>
                                 </div>
                                 </div>
-
+        
                                 <div class="col-md-4">
                                     <div class="card mb-2">
                                         <div class="card-body">
                                         <div class="dashboard-card-title">
-                                            RTF 4
+                                            RTF 3.1
                                         </div>
                                         <div class="dashboard-card-subtitle">
                                             <div class="row">
@@ -213,25 +176,25 @@
                                                     <div class="dashboard-card-title">
                                                         terjadwal
                                                     </div>
-                                                    {{ $new8 }}
+                                                    {{ $new6 }}
                                                 </div>
                                                 <div class="col">
                                                     <div class="dashboard-card-title">
                                                         check in
                                                     </div>
-                                                    {{ $checkin8 }}
+                                                    {{ $checkin6 }}
                                                 </div>
                                               </div>
                                         </div>
                                         </div>
                                     </div>
                                     </div>
-                                
+        
                                     <div class="col-md-4">
                                         <div class="card mb-2">
                                             <div class="card-body">
                                             <div class="dashboard-card-title">
-                                                RTF 4.1
+                                                RTF 3.3
                                             </div>
                                             <div class="dashboard-card-subtitle">
                                                 <div class="row">
@@ -239,25 +202,25 @@
                                                         <div class="dashboard-card-title">
                                                             terjadwal
                                                         </div>
-                                                        {{ $new9 }}
+                                                        {{ $new7 }}
                                                     </div>
                                                     <div class="col">
                                                         <div class="dashboard-card-title">
                                                             check in
                                                         </div>
-                                                        {{ $checkin9 }}
+                                                        {{ $checkin7 }}
                                                     </div>
                                                   </div>
                                             </div>
                                             </div>
                                         </div>
                                         </div>
-
+        
                                         <div class="col-md-4">
                                             <div class="card mb-2">
                                                 <div class="card-body">
                                                 <div class="dashboard-card-title">
-                                                    RTF 4.2
+                                                    RTF 4
                                                 </div>
                                                 <div class="dashboard-card-subtitle">
                                                     <div class="row">
@@ -265,26 +228,51 @@
                                                             <div class="dashboard-card-title">
                                                                 terjadwal
                                                             </div>
-                                                            {{ $new10 }}
+                                                            {{ $new8 }}
                                                         </div>
                                                         <div class="col">
                                                             <div class="dashboard-card-title">
                                                                 check in
                                                             </div>
-                                                            {{ $checkin10 }}
+                                                            {{ $checkin8 }}
                                                         </div>
                                                       </div>
                                                 </div>
                                                 </div>
                                             </div>
                                             </div>
-
-                                            
+                                        
+                                            <div class="col-md-4">
+                                                <div class="card mb-2">
+                                                    <div class="card-body">
+                                                    <div class="dashboard-card-title">
+                                                        RTF 4.1
+                                                    </div>
+                                                    <div class="dashboard-card-subtitle">
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="dashboard-card-title">
+                                                                    terjadwal
+                                                                </div>
+                                                                {{ $new9 }}
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="dashboard-card-title">
+                                                                    check in
+                                                                </div>
+                                                                {{ $checkin9 }}
+                                                            </div>
+                                                          </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                                </div>
+        
                                                 <div class="col-md-4">
                                                     <div class="card mb-2">
                                                         <div class="card-body">
                                                         <div class="dashboard-card-title">
-                                                            TA 10.1
+                                                            RTF 4.2
                                                         </div>
                                                         <div class="dashboard-card-subtitle">
                                                             <div class="row">
@@ -292,51 +280,26 @@
                                                                     <div class="dashboard-card-title">
                                                                         terjadwal
                                                                     </div>
-                                                                    {{ $new12 }}
+                                                                    {{ $new10 }}
                                                                 </div>
                                                                 <div class="col">
                                                                     <div class="dashboard-card-title">
                                                                         check in
                                                                     </div>
-                                                                    {{ $checkin12 }}
+                                                                    {{ $checkin10 }}
                                                                 </div>
                                                               </div>
                                                         </div>
                                                         </div>
                                                     </div>
                                                     </div>
-
-                                                    <div class="col-md-4">
-                                                        <div class="card mb-2">
-                                                            <div class="card-body">
-                                                            <div class="dashboard-card-title">
-                                                                TA 10.2
-                                                            </div>
-                                                            <div class="dashboard-card-subtitle">
-                                                                <div class="row">
-                                                                    <div class="col">
-                                                                        <div class="dashboard-card-title">
-                                                                            terjadwal
-                                                                        </div>
-                                                                        {{ $new13 }}
-                                                                    </div>
-                                                                    <div class="col">
-                                                                        <div class="dashboard-card-title">
-                                                                            check in
-                                                                        </div>
-                                                                        {{ $checkin13 }}
-                                                                    </div>
-                                                                  </div>
-                                                            </div>
-                                                            </div>
-                                                        </div>
-                                                        </div>
-
+        
+                                                    
                                                         <div class="col-md-4">
                                                             <div class="card mb-2">
                                                                 <div class="card-body">
                                                                 <div class="dashboard-card-title">
-                                                                    TA 10.3
+                                                                    TA 10.1
                                                                 </div>
                                                                 <div class="dashboard-card-subtitle">
                                                                     <div class="row">
@@ -344,25 +307,25 @@
                                                                             <div class="dashboard-card-title">
                                                                                 terjadwal
                                                                             </div>
-                                                                            {{ $new14 }}
+                                                                            {{ $new12 }}
                                                                         </div>
                                                                         <div class="col">
                                                                             <div class="dashboard-card-title">
                                                                                 check in
                                                                             </div>
-                                                                            {{ $checkin14 }}
+                                                                            {{ $checkin12 }}
                                                                         </div>
                                                                       </div>
                                                                 </div>
                                                                 </div>
                                                             </div>
                                                             </div>
-
+        
                                                             <div class="col-md-4">
                                                                 <div class="card mb-2">
                                                                     <div class="card-body">
                                                                     <div class="dashboard-card-title">
-                                                                        TA 10.4
+                                                                        TA 10.2
                                                                     </div>
                                                                     <div class="dashboard-card-subtitle">
                                                                         <div class="row">
@@ -370,25 +333,25 @@
                                                                                 <div class="dashboard-card-title">
                                                                                     terjadwal
                                                                                 </div>
-                                                                                {{ $new15 }}
+                                                                                {{ $new13 }}
                                                                             </div>
                                                                             <div class="col">
                                                                                 <div class="dashboard-card-title">
                                                                                     check in
                                                                                 </div>
-                                                                                {{ $checkin15 }}
+                                                                                {{ $checkin13 }}
                                                                             </div>
                                                                           </div>
                                                                     </div>
                                                                     </div>
                                                                 </div>
                                                                 </div>
-
+        
                                                                 <div class="col-md-4">
                                                                     <div class="card mb-2">
                                                                         <div class="card-body">
                                                                         <div class="dashboard-card-title">
-                                                                            TA 11.1
+                                                                            TA 10.3
                                                                         </div>
                                                                         <div class="dashboard-card-subtitle">
                                                                             <div class="row">
@@ -396,25 +359,25 @@
                                                                                     <div class="dashboard-card-title">
                                                                                         terjadwal
                                                                                     </div>
-                                                                                    {{ $new16 }}
+                                                                                    {{ $new14 }}
                                                                                 </div>
                                                                                 <div class="col">
                                                                                     <div class="dashboard-card-title">
                                                                                         check in
                                                                                     </div>
-                                                                                    {{ $checkin17 }}
+                                                                                    {{ $checkin14 }}
                                                                                 </div>
                                                                               </div>
                                                                         </div>
                                                                         </div>
                                                                     </div>
                                                                     </div>
-
+        
                                                                     <div class="col-md-4">
                                                                         <div class="card mb-2">
                                                                             <div class="card-body">
                                                                             <div class="dashboard-card-title">
-                                                                                TA 11.3
+                                                                                TA 10.4
                                                                             </div>
                                                                             <div class="dashboard-card-subtitle">
                                                                                 <div class="row">
@@ -422,25 +385,25 @@
                                                                                         <div class="dashboard-card-title">
                                                                                             terjadwal
                                                                                         </div>
-                                                                                        {{ $new18 }}
+                                                                                        {{ $new15 }}
                                                                                     </div>
                                                                                     <div class="col">
                                                                                         <div class="dashboard-card-title">
                                                                                             check in
                                                                                         </div>
-                                                                                        {{ $checkin18 }}
+                                                                                        {{ $checkin15 }}
                                                                                     </div>
                                                                                   </div>
                                                                             </div>
                                                                             </div>
                                                                         </div>
                                                                         </div>
-
+        
                                                                         <div class="col-md-4">
                                                                             <div class="card mb-2">
                                                                                 <div class="card-body">
                                                                                 <div class="dashboard-card-title">
-                                                                                    TA 11.4
+                                                                                    TA 11.1
                                                                                 </div>
                                                                                 <div class="dashboard-card-subtitle">
                                                                                     <div class="row">
@@ -448,25 +411,25 @@
                                                                                             <div class="dashboard-card-title">
                                                                                                 terjadwal
                                                                                             </div>
-                                                                                            {{ $new19 }}
+                                                                                            {{ $new16 }}
                                                                                         </div>
                                                                                         <div class="col">
                                                                                             <div class="dashboard-card-title">
                                                                                                 check in
                                                                                             </div>
-                                                                                            {{ $checkin19 }}
+                                                                                            {{ $checkin17 }}
                                                                                         </div>
                                                                                       </div>
                                                                                 </div>
                                                                                 </div>
                                                                             </div>
                                                                             </div>
-
+        
                                                                             <div class="col-md-4">
                                                                                 <div class="card mb-2">
                                                                                     <div class="card-body">
                                                                                     <div class="dashboard-card-title">
-                                                                                        TA 11.5
+                                                                                        TA 11.3
                                                                                     </div>
                                                                                     <div class="dashboard-card-subtitle">
                                                                                         <div class="row">
@@ -474,25 +437,25 @@
                                                                                                 <div class="dashboard-card-title">
                                                                                                     terjadwal
                                                                                                 </div>
-                                                                                                {{ $new20 }}
+                                                                                                {{ $new18 }}
                                                                                             </div>
                                                                                             <div class="col">
                                                                                                 <div class="dashboard-card-title">
                                                                                                     check in
                                                                                                 </div>
-                                                                                                {{ $checkin20 }}
+                                                                                                {{ $checkin18 }}
                                                                                             </div>
                                                                                           </div>
                                                                                     </div>
                                                                                     </div>
                                                                                 </div>
                                                                                 </div>
-
+        
                                                                                 <div class="col-md-4">
                                                                                     <div class="card mb-2">
                                                                                         <div class="card-body">
                                                                                         <div class="dashboard-card-title">
-                                                                                            GU 701
+                                                                                            TA 11.4
                                                                                         </div>
                                                                                         <div class="dashboard-card-subtitle">
                                                                                             <div class="row">
@@ -500,24 +463,25 @@
                                                                                                     <div class="dashboard-card-title">
                                                                                                         terjadwal
                                                                                                     </div>
-                                                                                                    {{ $new21 }}
+                                                                                                    {{ $new19 }}
                                                                                                 </div>
                                                                                                 <div class="col">
                                                                                                     <div class="dashboard-card-title">
                                                                                                         check in
                                                                                                     </div>
-                                                                                                    {{ $checkin21 }}
+                                                                                                    {{ $checkin19 }}
                                                                                                 </div>
                                                                                               </div>
                                                                                         </div>
                                                                                         </div>
                                                                                     </div>
                                                                                     </div>
+        
                                                                                     <div class="col-md-4">
                                                                                         <div class="card mb-2">
                                                                                             <div class="card-body">
                                                                                             <div class="dashboard-card-title">
-                                                                                                GU 702
+                                                                                                TA 11.5
                                                                                             </div>
                                                                                             <div class="dashboard-card-subtitle">
                                                                                                 <div class="row">
@@ -525,25 +489,25 @@
                                                                                                         <div class="dashboard-card-title">
                                                                                                             terjadwal
                                                                                                         </div>
-                                                                                                        {{ $new22 }}
+                                                                                                        {{ $new20 }}
                                                                                                     </div>
                                                                                                     <div class="col">
                                                                                                         <div class="dashboard-card-title">
                                                                                                             check in
                                                                                                         </div>
-                                                                                                        {{ $checkin22 }}
+                                                                                                        {{ $checkin20 }}
                                                                                                     </div>
                                                                                                   </div>
                                                                                             </div>
                                                                                             </div>
                                                                                         </div>
                                                                                         </div>
-
+        
                                                                                         <div class="col-md-4">
                                                                                             <div class="card mb-2">
                                                                                                 <div class="card-body">
                                                                                                 <div class="dashboard-card-title">
-                                                                                                    GU 704
+                                                                                                    GU 701
                                                                                                 </div>
                                                                                                 <div class="dashboard-card-subtitle">
                                                                                                     <div class="row">
@@ -564,12 +528,11 @@
                                                                                                 </div>
                                                                                             </div>
                                                                                             </div>
-
                                                                                             <div class="col-md-4">
                                                                                                 <div class="card mb-2">
                                                                                                     <div class="card-body">
                                                                                                     <div class="dashboard-card-title">
-                                                                                                        GU 705
+                                                                                                        GU 702
                                                                                                     </div>
                                                                                                     <div class="dashboard-card-subtitle">
                                                                                                         <div class="row">
@@ -590,12 +553,12 @@
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 </div>
-
+        
                                                                                                 <div class="col-md-4">
                                                                                                     <div class="card mb-2">
                                                                                                         <div class="card-body">
                                                                                                         <div class="dashboard-card-title">
-                                                                                                            GU 706
+                                                                                                            GU 704
                                                                                                         </div>
                                                                                                         <div class="dashboard-card-subtitle">
                                                                                                             <div class="row">
@@ -603,25 +566,25 @@
                                                                                                                     <div class="dashboard-card-title">
                                                                                                                         terjadwal
                                                                                                                     </div>
-                                                                                                                    {{ $new23 }}
+                                                                                                                    {{ $new21 }}
                                                                                                                 </div>
                                                                                                                 <div class="col">
                                                                                                                     <div class="dashboard-card-title">
                                                                                                                         check in
                                                                                                                     </div>
-                                                                                                                    {{ $checkin23 }}
+                                                                                                                    {{ $checkin21 }}
                                                                                                                 </div>
                                                                                                               </div>
                                                                                                         </div>
                                                                                                         </div>
                                                                                                     </div>
                                                                                                     </div>
-
+        
                                                                                                     <div class="col-md-4">
                                                                                                         <div class="card mb-2">
                                                                                                             <div class="card-body">
                                                                                                             <div class="dashboard-card-title">
-                                                                                                                GU 707
+                                                                                                                GU 705
                                                                                                             </div>
                                                                                                             <div class="dashboard-card-subtitle">
                                                                                                                 <div class="row">
@@ -629,110 +592,74 @@
                                                                                                                         <div class="dashboard-card-title">
                                                                                                                             terjadwal
                                                                                                                         </div>
-                                                                                                                        {{ $new24 }}
+                                                                                                                        {{ $new22 }}
                                                                                                                     </div>
                                                                                                                     <div class="col">
                                                                                                                         <div class="dashboard-card-title">
                                                                                                                             check in
                                                                                                                         </div>
-                                                                                                                        {{ $checkin24 }}
+                                                                                                                        {{ $checkin22 }}
                                                                                                                     </div>
                                                                                                                   </div>
                                                                                                             </div>
                                                                                                             </div>
                                                                                                         </div>
                                                                                                         </div>
-                    
-                
-            
         
-    
-            {{-- <div class="col-md-4">
-                <div class="card mb-2">
-                    <div class="card-body">
-                    <div class="dashboard-card-title">
-                        GU 604
-                    </div>
-                    <div class="dashboard-card-subtitle">
-                        {{ $loan2 }}
-                    </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card mb-2">
-                    <div class="card-body">
-                    <div class="dashboard-card-title">
-                         GU 606
-                    </div>
-                    <div class="dashboard-card-subtitle">
-                        {{ $loan3 }}
-                    </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card mb-2">
-                    <div class="card-body">
-                    <div class="dashboard-card-title">
-                        GU 607
-                    </div>
-                    <div class="dashboard-card-subtitle">
-                        {{ $loan4 }}
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-2">
-                    <div class="card-body">
-                    <div class="dashboard-card-title">
-                        GU 608
-                    </div>
-                    <div class="dashboard-card-subtitle">
-                        {{ $loan5 }}
-                    </div>
-                    </div>
-                </div>
-                </div> --}}
-                {{-- <div class="col-md-4">
-                    <div class="card mb-2">
-                        <div class="card-body">
-                        <div class="dashboard-card-title">
-                            TA 11.3
-                        </div>
-                        <div class="dashboard-card-subtitle">
-                            {{ $transaction }}
-                        </div>
-                        </div>
-                    </div>
-                    </div> --}}
-            {{-- <div class="col-md-4">
-            <div class="card mb-2">
-                <div class="card-body">
-                <div class="dashboard-card-title">
-                    Peminjaman Belum Kembali 
-                </div>
-                <div class="dashboard-card-subtitle"> --}}
-                    {{-- Rp. {{ $revenue }} --}}
-                {{-- </div>
-                </div>
-            </div>
-            </div>
-            <div class="col-md-4">
-            <div class="card mb-2">
-                <div class="card-body">
-                <div class="dashboard-card-title">
-                    Jumlah Peminjaman 
-                </div>
-                <div class="dashboard-card-subtitle"> --}}
-                    {{-- {{ $transactions }} --}}
-                {{-- </div>
-                </div>
-            </div>
-            </div> --}}
+                                                                                                        <div class="col-md-4">
+                                                                                                            <div class="card mb-2">
+                                                                                                                <div class="card-body">
+                                                                                                                <div class="dashboard-card-title">
+                                                                                                                    GU 706
+                                                                                                                </div>
+                                                                                                                <div class="dashboard-card-subtitle">
+                                                                                                                    <div class="row">
+                                                                                                                        <div class="col">
+                                                                                                                            <div class="dashboard-card-title">
+                                                                                                                                terjadwal
+                                                                                                                            </div>
+                                                                                                                            {{ $new23 }}
+                                                                                                                        </div>
+                                                                                                                        <div class="col">
+                                                                                                                            <div class="dashboard-card-title">
+                                                                                                                                check in
+                                                                                                                            </div>
+                                                                                                                            {{ $checkin23 }}
+                                                                                                                        </div>
+                                                                                                                      </div>
+                                                                                                                </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            </div>
+        
+                                                                                                            <div class="col-md-4">
+                                                                                                                <div class="card mb-2">
+                                                                                                                    <div class="card-body">
+                                                                                                                    <div class="dashboard-card-title">
+                                                                                                                        GU 707
+                                                                                                                    </div>
+                                                                                                                    <div class="dashboard-card-subtitle">
+                                                                                                                        <div class="row">
+                                                                                                                            <div class="col">
+                                                                                                                                <div class="dashboard-card-title">
+                                                                                                                                    terjadwal
+                                                                                                                                </div>
+                                                                                                                                {{ $new24 }}
+                                                                                                                            </div>
+                                                                                                                            <div class="col">
+                                                                                                                                <div class="dashboard-card-title">
+                                                                                                                                    check in
+                                                                                                                                </div>
+                                                                                                                                {{ $checkin24 }}
+                                                                                                                            </div>
+                                                                                                                          </div>
+                                                                                                                    </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                </div>
+                            
+                        
+                                                                             
         </div>
         </div>
     </div>

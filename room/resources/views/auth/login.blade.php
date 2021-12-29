@@ -7,7 +7,7 @@
             <div class="row align-items-center row-login">
                 <div class="col-lg-6 text-center">
                     <img
-                    src="{{ asset('public')}}/images/login-placeholder.jpg"
+                    src="/images/tap.png"
                     alt=""
                     class="w-75 rounded mb-4 mb-lg-none"
                     />

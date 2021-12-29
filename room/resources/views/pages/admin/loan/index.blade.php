@@ -62,7 +62,7 @@
             columns: [
                 {data: 'id', name:'id'},
                 {data: 'NIK', name:'NIK'},
-                {data: 'room_name', name:'room_name'},
+                {data: 'room.room_name', name:'room.room_name'},
                 {data: 'start', name:'start'},
                 {data: 'finish', name:'finish'},
                 {data: 'status', name:'status'},

@@ -45,6 +45,14 @@
                                                     <input type="text" name="name" class="form-control" required>
                                                 </div>
                                                 <div class="form-group">
+                                                    <label>Class</label>
+                                                    <select name="class_name" class="form-control">
+                                                        @foreach ($classes as $class)
+                                                            <option value="{{ $class->id }}">{{ $class->class_name }}</option>
+                                                        @endforeach
+                                                     </select>
+                                                </div>
+                                                <div class="form-group">
                                                     <div class="form-group">
                                                         <label>Username</label>
                                                         <input type="text" name="username" class="form-control" required>
@@ -66,6 +74,14 @@
                                                 <option value="mahasiswa">Mahasiswa</option>
                                             </select>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label>Roles</label>
+                                        <select name="position" class="form-control">
+                                            <option value="user">User</option>
+                                            <option value="admin">Admin</option>
+                                        </select>
+                                </div>
                                         <div class="form-group">
                                             <label>RFID</label>
                                             <input type="text" name="RFID" class="form-control" required>

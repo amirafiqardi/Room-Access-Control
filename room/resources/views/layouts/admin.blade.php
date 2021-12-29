@@ -27,16 +27,18 @@
           </div>
           <div class="list-group list-group-flush">
 
+            <a
+              href="{{ route('admin.index') }}"
+              class="list-group-item list-group-item-action {{ (request()->is('admin')) ? 'active' : '' }} "
+              >Dashboard</a
+            > 
+
           <a
               href="{{ route('home.index') }}"
               class="list-group-item list-group-item-action {{ (request()->is('admin/home*')) ? 'active' : '' }}"
               >Home</a
             >
-           {{--}} <a
-              href="{{ route('admin-dashboard') }}"
-              class="list-group-item list-group-item-action {{ (request()->is('admin')) ? 'active' : '' }} "
-              >Dashboard</a
-            >
+      
             {{-- <a
               href="{{ route('product.index') }}"
               class="list-group-item list-group-item-action {{ (request()->is('admin/product')) ? 'active' : '' }}"

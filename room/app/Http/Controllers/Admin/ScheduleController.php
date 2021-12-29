@@ -22,7 +22,7 @@ class ScheduleController extends Controller
     {
         if(request()->ajax())   
         {
-            $query = Schedule::query();
+            $query = Schedule::with(['classes', 'room'])->orderBy('id', 'ASC');
             return Datatables::of($query)
             ->addcolumn('action', function($item) {
                 return '
@@ -113,10 +113,14 @@ class ScheduleController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
+    { 
         $items = Schedule::findOrFail($id);
+        $classes = Classes::all();
+        $room_name = Room::all();
         return view('pages.admin.schedule.edit', [
             'items' => $items,
+            'classes' => $classes,
+            'room' => $room_name,
         ]);
     }
 
@@ -127,15 +131,16 @@ class ScheduleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id)
+    public function update(request $request, $id)
     {
         $data['checkout'] = now();
 
         $item = Schedule::findOrFail($id);
 
-        $item->update($data);
+        $item->update($request->all());
 
         return redirect()->route('schedules.index');
+
     }
 
     /**

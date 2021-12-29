@@ -10,6 +10,7 @@ use App\Loan;
 use App\User;
 use Illuminate\Http\Request;
 
+use App\Http\Controllers\Controller;
 use Yajra\DataTables\Facades\DataTables;
 
 class DashboardLoanController extends Controller
@@ -19,7 +20,7 @@ class DashboardLoanController extends Controller
         
         if(request()->ajax())
         {
-            $query = Loan::query();
+            $query = Loan::with(['user', 'room'])->orderBy('id', 'ASC')->where("NIK", Auth::user()->NIK);
             return Datatables::of($query)
             ->addcolumn('action', function($item) {
                 if (is_null($item->checkout)){
@@ -70,11 +71,11 @@ class DashboardLoanController extends Controller
         //dd($request->all());
         $loan = Loan::create([
             //'NIK' => Auth::user()->NIK,
-            'NIK' => $request->NIK,
+            'NIK' => Auth::user()->NIK,
             'room_name' => $request->room_name,
             'start' => $request->start,
             'finish' => $request->finish,
-            'status' => $request->status,
+            'status' => 'Diajukan',
         ]);
               
         return redirect()->route('dashboard-loans.index');

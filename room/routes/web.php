@@ -19,6 +19,8 @@ Route::get('/', function () {
     return redirect('/login');
 });
 
+Route::get('/check/{id}/{room_id}', 'api\cekcontroller@check');
+
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
@@ -37,12 +39,14 @@ Route::prefix('admin')
         Route::resource('guests', 'GuestController');
         Route::resource('home', 'HomeController');
         Route::resource('loans', 'LoanController');
+        Route::resource('admin', 'DashboardAdminController');
         
     });
 
 Route::group(['middleware' => 'auth'], function () {
     //Route::get('/', 'DashboardController@index')->name('dashboard');
     Route::resource('dashboard-transactions', 'DashboardTransactionController');
-    //Route::resource('dashboard', 'DashboardController');
+    Route::resource('dashboard', 'DashboardController');
     Route::resource('dashboard-loans', 'DashboardLoanController');
+    
 });

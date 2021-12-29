@@ -39,14 +39,15 @@
                     @endif
                     <div class="card">
                         <div class="card-body">
-                            <form action="{{ route('loans.update')}}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('loans.update', $items->id) }}" method="POST" enctype="multipart/form-data">
+                                @method('PUT')
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="form-group">
+                                        {{-- <div class="form-group">
                                             <label>NIK</label>
                                             <input type="text" name="NIK" class="form-control" required>
-                                        </div>
+                                        </div> --}}
                                         <div class="form-group">
                                             <label>Room</label>
                                             <select name="room_name" class="form-control">
@@ -58,8 +59,8 @@
 
                                         <div class="form-group">
                                             <label>Start</label>
-                                            <div  class='input-group date' id='datetimepicker1'>
-                                                <input name="start" type='text' class="form-control" />
+                                            <div class='input-group date' >
+                                                <input id='datetimepicker1' name="start" value="{{ $items->start }}" type='text' class="form-control" />
                                                 <span class="input-group-addon">
                                                   <span class="glyphicon glyphicon-calendar"></span>
                                                 </span>
@@ -68,18 +69,17 @@
 
                                         <div class="form-group">
                                             <label>Finish</label>
-                                            <div class='input-group date' id='datetimepicker2'>
-                                              <input name="finish" type='text' class="form-control" />
-                                              <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-calendar"></span>
-                                              </span>
+                                            <div class='input-group date' >
+                                                <input id='datetimepicker2' name="finish" value="{{ $items->finish }}" type='text' class="form-control" />
+                                                <span class="input-group-addon">
+                                                  <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
                                             </div>
-                                          </div>
+                                        </div>
 
                                         <div class="form-group">
                                             <label>Status</label>
                                             <select name="status" class="form-control">
-                                                <option>Mengajukan</option>
                                                 <option>Diterima</option>
                                                 <option>Ditolak</option>
                                             </select>

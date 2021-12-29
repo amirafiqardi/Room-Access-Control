@@ -23,7 +23,7 @@ class TransactionController extends Controller
     {
         if(request()->ajax())   
         {
-            $query = Transaction::with(['user', 'room'])->orderBy('id', 'DESC');
+            $query = Transaction::with(['user', 'room', 'schedule', 'schedule.classes'])->orderBy('id', 'DESC');
             return Datatables::of($query)
                 ->addcolumn('action', function($item) {
                     if (is_null($item->checkout)){
@@ -83,6 +83,7 @@ class TransactionController extends Controller
      */
     public function store(Request $request)
     {
+        //dd($request->all());
         $transaction = Transaction::create([
             'NIK' => $request->NIK,
             //'NIK' => Auth::user()->NIK,

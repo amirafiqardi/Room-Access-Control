@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Classes;
 use App\Http\Requests\TransactionRequest;
 
 use illuminate\Support\Facades\Auth;
@@ -20,7 +21,7 @@ class LoanController extends Controller
         
         if(request()->ajax())
         {
-            $query = Loan::all()->query;
+            $query = Loan::with(['room'])->orderBy('id', 'ASC');
             return Datatables::of($query)
                 ->addcolumn('action', function($item) {
                     
@@ -102,8 +103,11 @@ class LoanController extends Controller
     public function edit($id)
     {
         $items = Loan::findOrFail($id);
+        $room_name = Room::all();
+
         return view('pages.admin.loan.edit', [
             'items' => $items,
+            'room' => $room_name,
         ]);
     }
 

@@ -58,8 +58,8 @@
             },
             columns: [
                 {data: 'id', name:'id'},
-                {data: 'class_name', name:'class_name'},
-                {data: 'room_name', name:'room_name'},
+                {data: 'classes.class_name', name:'classes.class_name'},
+                {data: 'room.room_name', name:'room.room_name'},
                 {data: 'start', name:'start'},
                 {data: 'finish', name:'finish'},
                 {

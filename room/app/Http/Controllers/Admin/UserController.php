@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\User;
+use App\Classes;
 use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
@@ -20,7 +21,7 @@ class UserController extends Controller
     {
         if(request()->ajax())   
         {
-            $query = User::query();
+            $query = User::with(['classes'])->orderBy('id', 'ASC');
             return Datatables::of($query)
             ->addcolumn('action', function($item) {
                 return '
@@ -63,7 +64,11 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.user.create');
+        $classes = Classes::all();
+
+        return view('pages.admin.user.create', [
+            'classes' => $classes,
+        ]);
 
     }
 
@@ -79,6 +84,7 @@ class UserController extends Controller
         $user = User::create([
             'NIK' => $request->NIK,
             'name' => $request->name,
+            'class_name' => $request->class_name,
             'username' => $request->username,
             'email' => $request->email,
             'password' => $request->password,

@@ -14,6 +14,7 @@ class Transaction extends Model
     protected $fillable = [
         'NIK',
         'room_name',
+        'schedule',
         'checkin',
         'checkout',
     ];
@@ -36,6 +37,12 @@ class Transaction extends Model
     public function room()
     {
         return $this->belongsTo(Room::class, 'room_name', 'id');
+        
+    }
+
+    public function schedule()
+    {
+        return $this->belongsTo(Schedule::class, 'schedule', 'id');
         
     }
 }

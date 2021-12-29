@@ -5,6 +5,14 @@
     Schedules
 @endsection
 
+@push('addon-style')
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+
+
+@endpush
+
 @section('content')
 <div
     class="section-content section-dashboard-home"
@@ -39,21 +47,59 @@
 
                                         <div class="form-group">
                                             <label>Class</label>
-                                            <input type="text" name="class_name" value="{{ $items->class_name }}" class="form-control" required>
-                                        </div>
+                                            <select name="class_name" class="form-control">
+                                                @foreach ($classes as $class)
+                                                    <option value="{{ $class->id }}">{{ $class->class_name }}</option>
+                                                @endforeach
+                                             </select>
+
+                                        
+                                             {{-- <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label>Room</label>
+                                                    <input type="text" name="room_name" value="{{ $items->room_name }}" class="form-control" required>
+                                                </div>
+                                            </div> --}}
+
                                         <div class="form-group">
                                             <label>Room</label>
-                                            <input type="text" name="room_name" value="{{ $items->room_name }}" class="form-control" required>
+                                            <select name="room_name"  class="form-control" required>
+                                                @foreach ($room as $room)
+                                                <option value="{{ $items->room_name }}" type='text'>{{ $room->room_name }} </option>
+                                                @endforeach
+                                             </select>
                                         </div>
+
+                                        {{-- <div class="form-group">
+                                            <label>Room</label>
+                                            <input type="text" name="room_name" value="{{ $items->room_name }}" class="form-control" required>
+                                        </div> --}}
                                         
+
                                         <div class="form-group">
                                             <label>Start</label>
-                                            <input type="text" name="start" value="{{ $items->start }}" class="form-control" required>
+                                            <div class='input-group date' >
+                                                <input id='datetimepicker1' name="start" value="{{ $items->start }}" type='text' class="form-control" />
+                                                <span class="input-group-addon">
+                                                  <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
                                         </div>
+
                                         <div class="form-group">
                                             <label>Finish</label>
-                                            <input type="text" name="finish" value="{{ $items->finish }}" class="form-control" required>
+                                            <div class='input-group date' >
+                                                <input id='datetimepicker2' name="finish" value="{{ $items->finish }}" type='text' class="form-control" />
+                                                <span class="input-group-addon">
+                                                  <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
                                         </div>
+
+                                        {{-- <div class="form-group">
+                                            <label>Finish</label>
+                                            <input id="datetimepicker2" type="text" name="finish" value="{{ $items->finish }}" class="form-control" required>
+                                        </div> --}}
                                             </select>
                                         </div>
                                     </div>
@@ -74,3 +120,29 @@
     </div>
     </div>
 @endsection
+
+@push ('addon-scripts')
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+
+    <script>
+
+          $(function () {
+            $('#datetimepicker1').datetimepicker({
+                
+            });
+        
+
+            $('#datetimepicker2').datetimepicker({
+      
+            });
+
+        });
+        
+    
+    </script>
+
+@endpush

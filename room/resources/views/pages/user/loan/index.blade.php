@@ -29,7 +29,7 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th id="NIK">NIK</th>
+                                        {{-- <th id="NIK">NIK</th> --}}
                                         <th id="room_name">Room</th>
                                         <th>Start</th>
                                         <th>Finish</th>
@@ -59,8 +59,8 @@
             },
             columns: [
                 {data: 'id', name:'id'},
-                {data: 'user.NIK', name:'user.NIK'},
-                {data: 'room_name', name:'room_name'},
+                // {data: 'NIK', name:'NIK'},
+                {data: 'room.room_name', name:'room.room_name'},
                 {data: 'start', name:'start'},
                 {data: 'finish', name:'finish'},
                 {data: 'status', name:'status'},

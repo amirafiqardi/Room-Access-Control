@@ -18,6 +18,7 @@ class CreateTransactionsTable extends Migration
 
             $table->integer('NIK');
             $table->string('room_name'); 
+            $table->string('schedule'); 
             $table->dateTime('checkin', $precision = 0)->nullable();
             $table->dateTime('checkout', $precision = 0)->nullable();
             
